@@ -1,10 +1,12 @@
 const express = require('express');
 const  mongoose  = require('mongoose');
 const bodyParser = require('body-parser')
+const cors = require('cors')
 const userRoutes = require('./routes/userRoutes');
 const dbConnection = require('./config/dbConnect');
 const app = express()
 
+app.use(cors())
 require('dotenv').config()
 
 // parse application/x-www-form-urlencoded
